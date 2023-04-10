@@ -85,8 +85,11 @@ const TagsTable = () => {
             className="rounded-l-md p-2 w-full border-gray-300 border-r-0"
           />
           <button
+            disabled={!Boolean(newTagName) && true}
             type="submit"
-            className="bg-gray-200 w-full md:w-2/12 rounded-r-md px-4 py-2 hover:bg-gray-300 transition-colors"
+            className={`${
+              !Boolean(newTagName) && "opacity-50"
+            } bg-gray-200 w-full md:w-2/12 rounded-r-md px-4 py-2 hover:bg-gray-300 transition-colors`}
           >
             Add Tag
           </button>

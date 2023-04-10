@@ -7,14 +7,12 @@ FRONTEND_PATH="./client"
 BACKEND_PATH="./server"
 
 # Build the front-end project using npm
-npm run build
+yarn build
 
 cd ..
 
-cd $BACKEND_PATH
-
 # Create a new static folder in the backend project folder
-mkdir static
+mkdir -p static
 
 # Copy the built front-end files to the new static folder
 cp -R $FRONTEND_PATH/dist/* $BACKEND_PATH/static

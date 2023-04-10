@@ -63,8 +63,8 @@ const getAllPosts = async (req: Request, res: Response) => {
     ...searchQuery,
   });
 
-  const totalPage = Math.ceil((await db.post.count({})) / limit);
-  // Send posts to client
+  const totalPage = Math.floor((await db.post.count({})) / limit);
+
   res.json({ posts, totalPage });
 };
 

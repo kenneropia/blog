@@ -73,7 +73,7 @@ const PostsList = () => {
     });
 
     dispatch({ type: "SET_POST", payload: res.data.posts });
-
+    console.log(res.data.totalPage);
     dispatch({ type: "SET_TOTAL_PAGE", payload: res.data.totalPage });
     dispatch({ type: "SET_IS_LOADING", payload: false });
   };
@@ -96,6 +96,7 @@ const PostsList = () => {
 
   const handleSearchQuery = (search: string) => {
     dispatch({ type: "SET_SEARCH", payload: search });
+    dispatch({ type: "SET_PAGE", payload: 1 });
   };
   return (
     <div className="container mx-auto py-10">

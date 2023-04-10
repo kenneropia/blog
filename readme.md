@@ -12,5 +12,6 @@
   - `yarn dev`
 
 - build client
+
   - `cd client`
-  - `yarn build`
+  - `bash build.sh`

@@ -20,7 +20,7 @@ app.use("/api/categories", categoryRouter);
 app.use("/api/tags", tagRouter);
 
 app.get("*", function (req, res) {
-  res.sendFile("index.html", { root: path.join(__dirname, "./static/") });
+  res.sendFile("index.html", { root: path.join(__dirname, "../static/") });
 });
 
 app.all("*", (req, res) => {

@@ -25,7 +25,7 @@ function Login() {
       await auth.login(form);
       toast.success("Login successful");
       setErrorMessage(false);
-      location.reload();
+      navigate("/");
     }
   };
   return (

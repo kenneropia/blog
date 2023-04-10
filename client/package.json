@@ -1,6 +1,6 @@
 {
-  "name": "crisp-react-client",
-  "version": "1.4.0",
+  "name": "blog",
+  "version": "0.0.1",
   "description": "blogging",
   "license": "MIT",
   "repository": {
@@ -9,7 +9,7 @@
   "scripts": {
     "setup": "yarn install",
     "dev": "vite",
-    "build": "bash build.sh"
+    "build": "vite build"
   },
   "dependencies": {
     "@vitejs/plugin-react-swc": "^3.0.1",

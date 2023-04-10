@@ -15,7 +15,7 @@ function Navbar() {
               Blog {location.pathname.includes("admin") && "- CMS"}
             </Link>
           </div>
-          <div className="flex md:mt-0 mt-2 justify-center md:block">
+          <div className="sm:px-0 px-2 flex md:mt-0 mt-2 justify-center md:block">
             {getUser()?.role == "admin" ? (
               <div className="md:ml-10 flex items-baseline space-x-4">
                 <Link
