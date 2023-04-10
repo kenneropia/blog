@@ -1,0 +1,61 @@
+{
+  "name": "crisp-react-client",
+  "version": "1.4.0",
+  "description": "Client for the crisp-react project",
+  "author": "winwiz1 <winwiz@gmail.com> (https://github.com/winwiz1/)",
+  "contributors": [
+    "winwiz1 <winwiz@gmail.com> (https://github.com/winwiz1/)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/winwiz1/crisp-react/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winwiz1/crisp-react.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "visual-studio-code",
+    "chrome-devtools",
+    "webpack",
+    "webpack-dev-server",
+    "typestyle",
+    "react-testing-library",
+    "jest",
+    "semantic-ui"
+  ],
+  "scripts": {
+    "setup": "yarn install",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.0.1",
+    "axios": "^1.3.4",
+    "date-fns": "^2.29.3",
+    "draft-convert": "^2.1.13",
+    "draft-js": "^0.11.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-hot-toast": "^2.4.0",
+    "react-paystack": "^4.0.2",
+    "react-router-dom": "^6.7.0",
+    "vite": "^4.0.4",
+    "vite-tsconfig-paths": "^4.0.5",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/draft-js": "^0.11.10",
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-draft-wysiwyg": "^1.13.4",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  },
+  "engines": {
+    "node": "18.13.0"
+  }
+}
