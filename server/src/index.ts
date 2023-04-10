@@ -2,25 +2,26 @@ import express, { NextFunction, Request, Response } from "express";
 import { db } from "./db";
 import userRouter from "./user/user.router";
 import postRouter from "./post/post.router";
+import categoryRouter from "./category/category.router";
+import tagRouter from "./tag/tag.router";
+import path from "path";
 import cors from "cors";
 const app = express();
+
+app.use(express.static("./static"));
 
 app.use(cors());
 
 app.use(express.json());
 
-import swaggerUi from "swagger-ui-express";
-
-import swaggerDocument from "../swagger.json";
-import categoryRouter from "./category/category.router";
-import tagRouter from "./tag/tag.router";
-
-app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
 app.use("/api/user", userRouter);
 app.use("/api/posts", postRouter);
 app.use("/api/categories", categoryRouter);
 app.use("/api/tags", tagRouter);
+
+app.get("*", function (req, res) {
+  res.sendFile("index.html", { root: path.join(__dirname, "./static/") });
+});
 
 app.all("*", (req, res) => {
   return res.status(404).json({ message: "route not found" });

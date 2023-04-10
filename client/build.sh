@@ -11,6 +11,8 @@ npm run build
 
 cd ..
 
+cd $BACKEND_PATH
+
 # Create a new static folder in the backend project folder
 mkdir static
 
