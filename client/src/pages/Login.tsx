@@ -5,8 +5,8 @@ import useAuth from "../hooks/useAuth";
 
 function Login() {
   const [form, setForm] = useState({
-    email: "aaron@kenny.com",
-    password: "12345678",
+    email: "",
+    password: "",
   });
   const [errorMessage, setErrorMessage] = useState(false);
   const auth = useAuth();
